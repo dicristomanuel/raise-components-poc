@@ -8,15 +8,15 @@
       "data": "server.js",
       "template": {
         "src": "template.html",
-        "type": "react"
+        "type": "handlebars"
       }
     }
   },
   "scripts": {
-    "start": "BABEL_DISABLE_CACHE=1 webpack && open template.html",
-    "start-test": "webpack && webpack-dev-server --progress --colors && open template.html"
+    "webpack": "webpack --progress --colors",
+    "dev": "webpack-dev-server --progress --colors",
+    "start": "npm run dev"
   },
-  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
@@ -24,11 +24,9 @@
     "babel-preset-react": "^6.16.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "css-loader": "^0.9.0",
-    "extract-text-webpack-plugin": "^0.3.5",
-    "style-loader": "^0.8.2",
-    "stylus-loader": "^0.4.0",
-    "webpack": "^1.4.13",
-    "webpack-dev-server": "^1.6.6"
+    "react-router": "^2.8.1",
+    "static-site-generator-webpack-plugin": "^3.0.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
   }
 }

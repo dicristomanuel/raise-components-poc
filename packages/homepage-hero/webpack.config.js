@@ -1,11 +1,16 @@
-var path = require('path');
+var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
+var data = require('./data')
 
 module.exports = {
-  entry: './react/index.js',
-  output: {
-    path: "./src",
-    filename: "bundle.js",
+  entry: {
+    'main': './entry.js'
   },
+
+  output: {
+    filename: 'bundle.js',
+    libraryTarget: 'umd'
+  },
+
   module: {
     loaders: [
       {
@@ -16,14 +21,10 @@ module.exports = {
           presets: ['es2015', 'react']
         }
       },
-      {
-        test: /\.styl$/,
-        loaders: [
-          'style-loader',
-          'css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]',
-          'stylus-loader',
-        ],
-      }
     ]
-  }
-};
+  },
+
+  plugins: [
+    new StaticSiteGeneratorPlugin('main', '/template.html', data)
+  ]
+}
