@@ -25,6 +25,6 @@ module.exports = {
   },
 
   plugins: [
-    new StaticSiteGeneratorPlugin('main', '/template.html', data)
+    new StaticSiteGeneratorPlugin('main', '/template.html', { data: data })
   ]
 }

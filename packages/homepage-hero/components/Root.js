@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-class Root extends React.Component {
-  render () {
-    return <h1>Ciao</h1>
+class Root extends Component {
+  render() {
+    return (
+      <div>
+        <h1>HELLO WORLD!</h1>
+        <h3>{ this.props.title }</h3>
+      </div>
+    )
   }
 }
 
-export default Root
+export default Root;

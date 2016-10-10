@@ -68,14 +68,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _server2 = _interopRequireDefault(_server);
 
-	var _data = __webpack_require__(168);
-
-	var _data2 = _interopRequireDefault(_data);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = function render(locals, callback) {
-	  callback(null, _server2.default.renderToStaticMarkup(_react2.default.createElement(_Root2.default, _data2.default)));
+	  var data = locals.data;
+
+	  callback(null, _server2.default.renderToStaticMarkup(_react2.default.createElement(_Root2.default, data)));
 	};
 
 /***/ },
@@ -4278,8 +4276,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Root = function (_React$Component) {
-	  _inherits(Root, _React$Component);
+	var Root = function (_Component) {
+	  _inherits(Root, _Component);
 
 	  function Root() {
 	    _classCallCheck(this, Root);
@@ -4291,15 +4289,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'h1',
+	        'div',
 	        null,
-	        'Ciao'
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'HELLO WORLDS'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          this.props.title
+	        )
 	      );
 	    }
 	  }]);
 
 	  return Root;
-	}(_react2.default.Component);
+	}(_react.Component);
 
 	exports.default = Root;
 
@@ -20679,16 +20686,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	module.exports = ReactServerBatchingStrategy;
-
-/***/ },
-/* 168 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	module.exports = {
-	  title: 'My Static Site'
-	};
 
 /***/ }
 /******/ ])
