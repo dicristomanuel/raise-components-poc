@@ -4294,7 +4294,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _react2.default.createElement(
 	          'h1',
 	          null,
-	          'HELLO WORLDS'
+	          'Hey there!'
 	        ),
 	        _react2.default.createElement(
 	          'h3',

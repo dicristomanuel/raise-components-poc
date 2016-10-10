@@ -1,5 +1,15 @@
 {
+  "name": "raise-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "web.js",
+  "scripts": {
+    "start": "oc dev . 8080"
+  },
   "devDependencies": {
     "lerna": "2.0.0-beta.24"
+  },
+  "engines": {
+    "node": "6.6.0"
   }
 }
