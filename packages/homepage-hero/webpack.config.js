@@ -5,12 +5,10 @@ module.exports = {
   entry: {
     'main': './entry.js'
   },
-
   output: {
     filename: 'bundle.js',
     libraryTarget: 'umd'
   },
-
   module: {
     loaders: [
       {
@@ -23,7 +21,6 @@ module.exports = {
       },
     ]
   },
-
   plugins: [
     new StaticSiteGeneratorPlugin('main', '/template.html', { data: data })
   ]
