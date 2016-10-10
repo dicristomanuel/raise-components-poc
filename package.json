@@ -4,9 +4,10 @@
   "description": "",
   "main": "web.js",
   "scripts": {
-    "start": "oc dev . 8080"
+    "start": "oc dev ./packages 8080",
+    "preinstall": "npm install raise-oc -g"
   },
-  "devDependencies": {
+  "dependencies": {
     "lerna": "2.0.0-beta.24"
   },
   "engines": {
